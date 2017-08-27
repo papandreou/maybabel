@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/papandreou/maybabel#readme",
   "dependencies": {
-    "pkg-up": "^2.0.0",
     "semver": "^5.4.1"
   },
   "peerDependencies": {
