@@ -10,10 +10,10 @@ function locatePathSync(iterable, opts) {
     }
     for (var i = 0 ; i < iterable.length ; i += 1) {
         el = iterable[i];
-		if (fs.existsSync(pathModule.resolve(cwd, el))) {
-			return el;
-		}
-	}
+        if (fs.existsSync(pathModule.resolve(cwd, el))) {
+            return el;
+        }
+    }
 };
 
 // Un-es6ified version of https://github.com/sindresorhus/find-up/blob/master/index.js#L28
