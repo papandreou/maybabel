@@ -1,6 +1,6 @@
 {
   "name": "maybabel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Require babel-register unless the running node.js >= the .nvmrc version",
   "main": "index.js",
   "scripts": {
