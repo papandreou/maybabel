@@ -1,6 +1,7 @@
 var semver = require('semver');
 var fs = require('fs');
 var pathModule = require('path');
+var pathParse = require('path-parse');
 
 // Un-es6ified version of https://github.com/sindresorhus/locate-path/blob/master/index.js#L14
 function locatePathSync(iterable, opts) {
@@ -21,7 +22,7 @@ function findUpSync(filename, opts) {
     opts = opts || {};
 
     var dir = pathModule.resolve(opts.cwd || '');
-    var root = pathModule.parse(dir).root;
+    var root = pathParse(dir).root;
 
     var filenames = [].concat(filename);
 
