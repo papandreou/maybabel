@@ -50,4 +50,7 @@ while ((requiredNodeVersion.match(/\./g) || []).length < 2) {
 
 if (semver.lt(process.version.replace(/^v/, ''), requiredNodeVersion)) {
     require('babel-register');
+    try {
+        require('babel-polyfill');
+    } catch (err) {}
 }
