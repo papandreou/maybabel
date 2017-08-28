@@ -40,7 +40,7 @@ function pkgUpSync(filename, opts) {
 };
 
 
-var requiredNodeVersion = fs.readFileSync(pathModule.resolve(pkgUp.sync().replace(/[^/]+$/, ''), '.nvmrc'), 'utf-8').trim();
+var requiredNodeVersion = fs.readFileSync(pathModule.resolve(pkgUpSync().replace(/[^/]+$/, ''), '.nvmrc'), 'utf-8').trim();
 
 // Pad the contents of .nvmrc with as many times .0 as necessary to form an x.y.z version number
 while ((requiredNodeVersion.match(/\./g) || []).length < 2) {
