@@ -17,7 +17,7 @@ function locatePathSync(iterable, opts) {
 };
 
 // Un-es6ified version of https://github.com/sindresorhus/find-up/blob/master/index.js#L28
-function pkgUpSync(filename, opts) {
+function findUpSync(filename, opts) {
     opts = opts || {};
 
     var dir = pathModule.resolve(opts.cwd || '');
@@ -40,7 +40,7 @@ function pkgUpSync(filename, opts) {
 };
 
 
-var requiredNodeVersion = fs.readFileSync(pathModule.resolve(pkgUpSync().replace(/[^/]+$/, ''), '.nvmrc'), 'utf-8').trim();
+var requiredNodeVersion = fs.readFileSync(pathModule.resolve(findUpSync('package.json').replace(/[^/]+$/, ''), '.nvmrc'), 'utf-8').trim();
 
 // Pad the contents of .nvmrc with as many times .0 as necessary to form an x.y.z version number
 while ((requiredNodeVersion.match(/\./g) || []).length < 2) {
